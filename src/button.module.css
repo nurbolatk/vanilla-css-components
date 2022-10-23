@@ -1,0 +1,6 @@
+.button {
+  background: red;
+  & > span {
+    font-weight: bold;
+  }
+}
