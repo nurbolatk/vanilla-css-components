@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <button className={classes.button}>
-        Hi <span>there</span>
+        Hi <span className="span">there</span>
       </button>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
