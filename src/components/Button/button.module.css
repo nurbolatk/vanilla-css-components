@@ -7,7 +7,7 @@
   --_bg-dark: var(--color-bg-200-dark);
   --_bg: var(--_bg-light);
 
-  --_bg-hover-light: var(--color-bg-300-light);
+  --_bg-hover-light: var(--color-bg-200-light);
   --_bg-hover-dark: var(--color-bg-300-dark);
   --_bg-hover: var(--_bg-hover-light);
 
@@ -63,6 +63,8 @@
 /* hover */
 :where(.button):where(:not([disabled])):hover {
   background: var(--_bg-hover);
+  --_border-light: var(--_bg-hover);
+  --_border-dark: var(--_bg-hover);
 }
 
 /* active */
@@ -105,10 +107,23 @@
 :where(.primary) {
   --_bg-light: var(--color-primary-light);
   --_bg-dark: var(--color-primary-dark);
+  --_text: var(--_text-dark);
 
   --_bg-hover-light: var(--color-primary-hover-light);
   --_bg-hover-dark: var(--color-primary-hover-dark);
 
   --_border-light: var(--_bg-hover-light);
   --_border-dark: var(--_bg-hover-dark);
-} 
+}
+
+:where(.danger) {
+  --_bg-light: var(--color-danger-light);
+  --_bg-dark: var(--color-danger-dark);
+  --_text: var(--_text-dark);
+
+  --_bg-hover-light: var(--color-danger-hover-light);
+  --_bg-hover-dark: var(--color-danger-hover-dark);
+
+  --_border-light: var(--_bg-hover-light);
+  --_border-dark: var(--_bg-hover-dark);
+}

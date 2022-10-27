@@ -14,6 +14,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const Button = ({ className, color = 'default', variant = 'filled', size = 'md', ...props }: ButtonProps) => {
   return <button className={cx(className, classes.button, {
-    [classes.primary]: color === 'primary'
+    [classes.primary]: color === 'primary',
+    [classes.danger]: color === 'danger'
   })} {...props} />
 }

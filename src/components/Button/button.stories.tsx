@@ -15,3 +15,7 @@ export const Default: StoryObj<typeof Button> = {
 export const Primary: StoryObj<typeof Button> = {
   render: () => <Button color="primary">Button Label</Button>
 }
+
+export const Danger: StoryObj<typeof Button> = {
+  render: () => <Button color="danger">Button Label</Button>
+}
