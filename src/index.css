@@ -1,0 +1,58 @@
+:root {
+  /* text colors */
+  --color-text-primary-light: hsla(221, 28%, 16%);
+  --color-text-primary-dark: hsla(0 0% 100% / 0.9);
+  --color-text-primary: var(--color-text-primary-light);
+
+  --color-text-secondary-light: hsla(221 28% 16% / 0.8);
+  --color-text-secondary-dark: hsla(0 0% 100% / 0.75);
+  --color-text-secondary: var(--color-text-secondary-light);
+
+  --color-text-disabled-light: hsla(221 28% 16% / 0.65);
+  --color-text-disabled-dark: hsla(0 0% 100% / 0.6);
+  --color-text-disabled: var(--color-text-disabled-light);
+
+  /* background colors */
+  --color-bg-100-light: #FFFFFF;
+  --color-bg-200-light: #F8F9FC;
+  --color-bg-300-light: #F8F9FC;
+
+  --color-bg-100-dark: #0A0D14;
+  --color-bg-200-dark: #1B1F27;
+  --color-bg-300-dark: #23272F;
+
+  --color-bg-100: var(--color-bg-100-light);
+  --color-bg-200: var(--color-bg-200-light);
+  --color-bg-300: var(--color-bg-300-light);
+
+  /* line colors */
+  --color-line-light: #E1E6EF;
+  --color-line-dark: #3F444D;
+  --color-line: var(--color-line-light);
+
+  /* primary colors */
+  --color-primary-dark: #91B5FD;
+  --color-primary-light: #6194FA;
+  --color-primary: var(--color-primary-light);
+
+  --color-bg-primary: #F0F5FF;
+
+  --color-primary-hover-dark: #91B5FD;
+  --color-primary-hover-light: #1D5BD6;
+  --color-primary-hover: var(--color-primary-hover-light);
+
+  /* danger */
+  --color-danger-light: #E02D3C;
+  --color-danger-dark: #FCA6AD;
+  --color-danger: var(--color-danger-light);
+
+  --color-bg-danger: #FEF1F2;
+
+  --color-danger-hover-light: #BA2532;
+  --color-danger-hover-dark: #F8727D;
+  --color-danger-hover: var(--color-danger-hover-light);
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}

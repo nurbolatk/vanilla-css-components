@@ -1,11 +1,17 @@
-import * as React from 'react'
-import { useState } from 'react'
 import { Button } from './components/Button'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return <Button>hi folks</Button>
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: '1rem',
+      }}>
+      <Button>Button Label</Button>
+      <Button>Button Label</Button>
+      <Button disabled>Button Label</Button>
+    </div>
+  )
 }
 
 export default App

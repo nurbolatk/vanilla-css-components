@@ -1,0 +1,103 @@
+:where(.button) {
+  --_text-light: var(--color-text-primary-light);
+  --_text-dark: var(--color-text-primary-dark);
+  --_text: var(--_text-light);
+
+  --_bg-light: var(--color-bg-100-light);
+  --_bg-dark: var(--color-bg-200-dark);
+  --_bg: var(--_bg-light);
+
+  --_bg-hover-light: var(--color-bg-300-light);
+  --_bg-hover-dark: var(--color-bg-300-dark);
+  --_bg-hover: var(--_bg-hover-light);
+
+  --_padding-inline: 1.75ch;
+  --_padding-block: .75ch;
+  
+  --_border-radius: .5ch;
+  --_border-light: var(--color-line-light);
+  --_border-dark: var(--color-line-dark);
+  --_border: var(--_border-light);
+
+  --_shadow-depth-light: 0 1px var(--_border-light);
+  --_shadow-depth-dark: 0 1px var(--_border-dark);
+  --_shadow-depth: var(--_shadow-depth-light);
+
+  --_transition-motion-reduce: ;
+  --_transition-motion-ok:
+    box-shadow 145ms ease,
+    background 145ms ease,
+    outline-offset 145ms ease;
+  --_transition: var(--_transition-motion-reduce);
+
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: 1.5;
+  /* not defined before, default to 1 rem */
+  font-size: var(--_size, 1rem);
+  font-weight: 600;
+
+  
+  background: var(--_bg);
+  color: var(--_text);
+  border: 1px solid var(--_border);
+  border-radius: var(--_border-radius);
+  box-shadow: var(--_shadow-depth);
+  transition: var(--_transition);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1ch;
+  padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline);
+}
+
+/* hover */
+:where(.button):where(:not([disabled])):hover {
+  background: var(--_bg-hover);
+}
+
+/* active */
+:where(.button):where(:not([disabled])):active {
+  transform: translateY(1px);
+}
+
+/* focus */
+:where(.button):where(:not(:active)):focus-visible {
+  outline-offset: 5px;
+}
+
+/* disabled */
+:where(.button)[disabled] {
+  --_bg-light: var(--color-bg-300-light);
+  --_bg-dark: #3F444D;
+  --_text-light: var(--color-text-disabled-light);
+  --_text-dark: var(--color-text-disabled-dark);
+
+  cursor: not-allowed;
+}
+
+/* toggle dark mode */
+@media (prefers-color-scheme: dark) {
+  :where(.button) {
+    --_text: var(--_text-dark);
+    --_bg: var(--_bg-dark);
+    --_bg-hover: var(--_bg-hover-dark);
+    --_border: var(--_border-dark);
+    --_shadow-depth: var(--_shadow-depth-dark);
+  }
+}
+/* toggle reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  :where(.button) {
+    --_transition: var(--_transition-motion-ok);
+  }
+}
