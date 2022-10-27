@@ -101,3 +101,14 @@
     --_transition: var(--_transition-motion-ok);
   }
 }
+/* color primary */
+:where(.primary) {
+  --_bg-light: var(--color-primary-light);
+  --_bg-dark: var(--color-primary-dark);
+
+  --_bg-hover-light: var(--color-primary-hover-light);
+  --_bg-hover-dark: var(--color-primary-hover-dark);
+
+  --_border-light: var(--_bg-hover-light);
+  --_border-dark: var(--_bg-hover-dark);
+} 
